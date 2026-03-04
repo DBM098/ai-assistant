@@ -1,5 +1,5 @@
 # Modelo a usar (gratis en Groq)
-MODEL = "llama3-8b-8192"
+MODEL = "llama-3.3-70b-versatile"
 
 # Máximo de tokens en la respuesta
 MAX_TOKENS = 1024
