@@ -2,7 +2,7 @@
 MODEL = "openai/gpt-oss-120b"
 
 # Modelo de vision para analisis de imagenes
-VISION_MODEL = "llama-3.2-11b-vision-preview"
+VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 
 # Maximo de tokens
 MAX_TOKENS = 2048
