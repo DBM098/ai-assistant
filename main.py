@@ -115,7 +115,7 @@ HTML = """
   </header>
 
   <div id="chat">
-    <div class="msg ai">¡Hola! Soy tu asistente IA. ¿En qué puedo ayudarte hoy?</div>
+    <div class="msg ai">¡Hola! Soy ChIAquil. ¿En qué puedo ayudarte hoy?</div>
   </div>
 
   <div id="form">

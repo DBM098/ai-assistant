@@ -43,7 +43,7 @@ class AIAssistant:
         keywords = [
             "hoy", "ahora", "actual", "reciente", "ultimo", "ultimos",
             "noticias", "precio", "clima", "tiempo", "2024", "2025", "2026",
-            "quien gano", "que paso", "nueva", "nuevo", "hoy en dia"
+            "quien gano", "que paso", "nueva", "nuevo", "hoy en dia", "busca", "buscar"
         ]
         return any(k in message.lower() for k in keywords)
 
