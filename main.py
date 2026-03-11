@@ -143,9 +143,10 @@ HTML = """
         hideTyping();
         addMsg(data.response, 'ai');
         removeImage();
-      } catch {
+      } catch (err) {
         hideTyping();
-        addMsg('Error al conectar. Intenta de nuevo.', 'ai');
+        addMsg('Error al conectar con el servidor. Intenta de nuevo.', 'ai');
+        console.error(err);
       }
     }
 
@@ -164,18 +165,24 @@ def index():
 
 @app.route("/chat", methods=["POST"])
 def chat():
-    data = request.json
-    response = assistant.chat(data["message"])
-    return jsonify({"response": response})
+    try:
+        data = request.json
+        response = assistant.chat(data["message"])
+        return jsonify({"response": response})
+    except Exception as e:
+        return jsonify({"response": f"Error al procesar tu mensaje: {str(e)}"}), 500
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    image = request.files.get("image")
-    message = request.form.get("message", "")
-    if not image:
-        return jsonify({"response": "No se recibio ninguna imagen, ser superior."})
-    response = assistant.analyze_image(image.read(), message)
-    return jsonify({"response": response})
+    try:
+        image = request.files.get("image")
+        message = request.form.get("message", "")
+        if not image:
+            return jsonify({"response": "No se recibio ninguna imagen, ser superior."})
+        response = assistant.analyze_image(image.read(), message)
+        return jsonify({"response": response})
+    except Exception as e:
+        return jsonify({"response": f"Error al analizar la imagen: {str(e)}"}), 500
 
 @app.route("/reset", methods=["POST"])
 def reset():
