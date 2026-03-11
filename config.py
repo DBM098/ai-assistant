@@ -1,5 +1,5 @@
 # Modelo principal
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "openai/gpt-oss-120b"
 
 # Modelo de vision para analisis de imagenes
 VISION_MODEL = "llama-3.2-11b-vision-preview"
