@@ -7,4 +7,4 @@ imagenes y crear nuevo codigo desde cero
 Este es un proyecto experimental, puede que la IA cometa errores o dar informacion
 completamente erronea
 
-Puedes usarla [AQUI](chiaquil.dpdns.org)
+Puedes usarla en (chiaquil.dpdns.org)
